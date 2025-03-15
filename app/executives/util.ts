@@ -22,8 +22,7 @@ export interface ExecutiveYear {
 
 // Helper function to get executives for a specific year
 export function getExecutivesByYear(year: string): ExecutiveYear | undefined {
-  return executivesData.find((exec) => exec.year === year) ?? undefined;
-}
+  return executivesData.find((exec) => exec.year === year) as ExecutiveYear;
 
 // Helper function to get all available years
 export function getAvailableYears(): string[] {
